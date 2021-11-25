@@ -1,26 +1,22 @@
 <template>
-  <div>
-    <img src="../assets/logo.png" alt="">
-  </div>
+	<div>
+		<img src="../assets/logo.png" alt="">
+	</div>
 </template>
 
 <script>
 export default {
-name:'Header'
+name:'Header',
 }
 </script>
 
-<style lang = 'scss' scoped>
+<style lang="scss" scoped>
 @import '@/styles/global.scss';
-
-  div{
-    padding: 10px;
-    width: 100%;
-    background-color: $headColor;
-    position: fixed;
-    img{
-      max-width: 40px;
-      }
-    
-  }
+div{
+	background: $headColor;
+	img{
+		width: 45px;
+		margin: 10px 0 10px 10px;
+	}
+}
 </style>
