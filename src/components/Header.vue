@@ -15,7 +15,12 @@ name:'Header'
 
   div{
     padding: 10px;
+    width: 100%;
     background-color: $headColor;
-    img{max-width: 40px;}
+    position: fixed;
+    img{
+      max-width: 40px;
+      }
+    
   }
 </style>

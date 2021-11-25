@@ -2,26 +2,24 @@
   <div id="app">
    <section class="main-section">
       <Header/>
-      <MusList/>
+      <Main/>
   </section>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
-import MusList from '@/components/MusList.vue'
+import Main from '@/components/Main.vue'
 export default {
   name: 'App',
   components: {
     Header,
-    MusList
+    Main,
   }
 }
 </script>
 
 <style lang="scss">
 @import '@/styles/global.scss';
-  .main-section{
-    height: 100vh;
-  }
+ 
 </style>
