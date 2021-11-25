@@ -1,13 +1,18 @@
 <template>
 	<div>
-		<div v-for="(item,index) in musicList" :key="index">
-			<Card
-			:poster = item.poster
-			:title = item.title
-			:author = item.author
-			:genre = item.genre
-			:year = item.year
-			/>
+		<div v-if="musicList !== null">
+				<div v-for="(item,index) in musicList" :key="`item-${index}`">
+					<Card
+					:poster = item.poster
+					:title = item.title
+					:author = item.author
+					:genre = item.genre
+					:year = item.year
+					/>
+				</div>	
+		</div>
+		<div v-else>
+			LOADER...
 		</div>	
 	</div>	
 </template>
