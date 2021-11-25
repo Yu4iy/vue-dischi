@@ -1,16 +1,26 @@
 <template>
-  <div>
-	
-  </div>
+	<div>
+		<div v-for="(item,index) in musicList" :key="index">
+			<Card
+			:poster = item.poster
+			:title = item.title
+			:author = item.author
+			:genre = item.genre
+			:year = item.year
+			/>
+		</div>	
+	</div>	
 </template>
 
 <script>
 import axios from 'axios'
+import Card from '@/components/Card.vue'
 
 export default {
 name:'MusList',
 data() {
 	return{
+		
 		musicList: null,
 	}
 },
@@ -26,12 +36,16 @@ methods:{
 	}
 },
 components:{
-
+Card,
 }
 }
 
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+	div{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 </style>
