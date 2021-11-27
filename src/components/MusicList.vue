@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<div v-if = "list !== null" class="cards">
-			<div v-for="(item, index) in list" :key = "`item-${index}`">
+		<div v-if = "MusList !== null" class="cards">
+			<div v-for="(item, index) in MusList" :key = "`item-${index}`">
 				<Card
 					:poster	=	item.poster
 					:title	=	item.title
@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 import Card from '@/components/Card.vue'
 import Loader from '@/components/Loader.vue'
 export default {
@@ -30,23 +29,21 @@ components:{
 },
 data(){
 	return{
-
-		list:null
+		
+	
 	}
 },
 
 created(){
-	this.getMusicList()
+
 },
 
 methods:{
-	getMusicList(){
-		axios
-		.get('https://flynn.boolean.careers/exercises/api/array/music')
-		.then(response => (this.list = response.data.response))
-		
-	}
 
+
+},
+props:{
+	MusList:Array
 }
 
 }
